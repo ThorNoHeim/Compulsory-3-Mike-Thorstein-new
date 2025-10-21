@@ -5,6 +5,7 @@ class Player_adventure
 {
 public:
 	Mathmatics position;
+
 	float speed = 500.f;
 	float size = 25.f;
 

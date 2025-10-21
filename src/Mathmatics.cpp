@@ -70,6 +70,15 @@ float Mathmatics::targetDistance(Mathmatics inTargetVector)
 	return targetsDistance;
 }
 
+float Mathmatics::CrossProduct(Mathmatics inOtherVector)
+{
+	float aComponentMultiplied = x * inOtherVector.y;
+	float bComponentMultiplied = y * inOtherVector.x;
+	float crossProduct = aComponentMultiplied - bComponentMultiplied;
+
+	return crossProduct;
+}
+
 float Mathmatics::DotProduct(Mathmatics inOtherVector)
 {
 	float xComponentMultiplied = x * inOtherVector.x;

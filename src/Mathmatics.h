@@ -1,4 +1,6 @@
+#pragma once
 #include <cmath>
+#include <algorithm>
 #include <iostream>
 #include <math.h>
 #include <random>
@@ -6,8 +8,9 @@
 #include <string>
 #include <vector>
 #include <ostream>
+#include <corecrt_math.h>
 
-class Mathmatics
+class	Mathmatics
 {
 public:
 	float x;
@@ -28,6 +31,8 @@ public:
 	Mathmatics vectorTowardTarget(Mathmatics inTargetVector);
 
 	float targetDistance(Mathmatics inTargetVector);
+
+	float CrossProduct(Mathmatics inOtherVector);
 
 	float DotProduct(Mathmatics inOtherVector);
 
