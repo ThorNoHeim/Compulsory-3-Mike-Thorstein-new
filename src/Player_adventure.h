@@ -1,12 +1,14 @@
-//#pragma once
-//class Player_adventure
-//{
-//public:
-//	Vector2d position;
-//	float speed = 500.f;
-//	float size = 25.f;
-//
-//	void Move();
-//	void Draw(Vector2d aimDirection);
-//	Vector2d aimDirection();
-//};
+#pragma once
+#include "Mathmatics.h"
+
+class Player_adventure
+{
+public:
+	Mathmatics position;
+	float speed = 500.f;
+	float size = 25.f;
+
+	void Move();
+	void Draw(Mathmatics aimDirection);
+	Mathmatics aimDirection();
+};
