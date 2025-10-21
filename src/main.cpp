@@ -13,8 +13,8 @@
 int main()
 {
 	//screen setup
-	int screenWidth = 2550;
-	int screenHeight = 1450;
+	int screenWidth = 2500;
+	int screenHeight = 1300;
 
 	float halfScreenWidth = (float)(screenWidth / 2);
 	float halfScreenHeight = (float)(screenHeight / 2);
