@@ -7,19 +7,40 @@ float Mathmatics::getPythagoras()
 	return pythagoras;
 }
 
-//float Mathmatics::acceleration()
+//float Mathmatics::acceleration(float inSpeedIncrease)
 //{
 //	//acceleration is m/s^2, or meter per second per second, where m/s is speed in meters per second, and acceleration is speed added per second
+// dt = GetFrameTime()
+// acceleration = inSpeedIncrease/(dt*dt)
 //
 //	return 0.0f;
 //}
 //
 //float Mathmatics::areaGravity(float gravityQuotient)
 //{
-//	float earthGravity = 9.8; //earth gravity is 9,8 m/s^2
+//	float earthGravity = 9.81f; //earth gravity is 9,81 m/s^2 as downwards acceleration
 //	float areaGravity = earthGravity * gravityQuotient;
 //	return areaGravity;
 //}
+
+/*
+float g = 9.81f;
+
+float speed = chargelevel * 400f;
+
+float arrowAcceleration = -50f;
+
+speed += arrowAcceleration * dt;
+
+if (hitEnemyThisFrame){
+speed -= 100f;
+}
+
+if (speed <= 0){
+deleteArrow();
+}
+
+*/
 
 Mathmatics Mathmatics::vectorOffset(Mathmatics inVectorToAdd)
 {
@@ -107,6 +128,14 @@ float Mathmatics::angleBetweenVectors(Mathmatics inOtherVector)
 Mathmatics Mathmatics::CosineMovement(Mathmatics inCenter, float inAmplitude, float inAngle)
 {
 	float x = inCenter.x + inAmplitude * cosf(inAngle);
+	float y = inCenter.y;
+
+	return { x, y };
+}
+
+Mathmatics Mathmatics::SineMovement(Mathmatics inCenter, float inAmplitude, float inAngle)
+{
+	float x = inCenter.x + inAmplitude * sinf(inAngle);
 	float y = inCenter.y;
 
 	return { x, y };

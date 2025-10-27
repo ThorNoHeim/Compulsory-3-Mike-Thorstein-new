@@ -9,6 +9,7 @@
 #include <vector>
 #include <ostream>
 #include <corecrt_math.h>
+#include <stdlib.h>
 
 class	Mathmatics
 {
@@ -18,7 +19,7 @@ public:
 
 	float getPythagoras(); //Pythagoras is used to calculate distances or the magnitude/length of vectors
 
-	//float acceleration();
+	//float acceleration(float inSpeedIncrease);
 
 	//float areaGravity(float gravityQuotient);
 
@@ -28,17 +29,19 @@ public:
 
 	Mathmatics NormalizeVector(); //makes it easier to track and change direction
 
-	Mathmatics vectorTowardTarget(Mathmatics inTargetVector);
+	Mathmatics vectorTowardTarget(Mathmatics inTargetVector); //for targetting
 
-	float targetDistance(Mathmatics inTargetVector);
+	float targetDistance(Mathmatics inTargetVector); //calculates the distance to target
 
-	float CrossProduct(Mathmatics inOtherVector);
+	float CrossProduct(Mathmatics inOtherVector); //to find the direction of the target. - means target is to the right, + means target is on the left, 0 means the target is right in front of you or right behind you
 
-	float DotProduct(Mathmatics inOtherVector);
+	float DotProduct(Mathmatics inOtherVector); //deflection/bouncing
 
-	float angleBetweenVectors(Mathmatics inOtherVector);
+	float angleBetweenVectors(Mathmatics inOtherVector); //vision cones/detection/aim assist
 
 	Mathmatics CosineMovement(Mathmatics inCenter, float inAmplitude, float inAngle);
+
+	Mathmatics SineMovement(Mathmatics inCenter, float inAmplitude, float inAngle);
 
 	Mathmatics CircularMotion(Mathmatics inCenter, float inRadius, float inAngle);
 
