@@ -19,9 +19,9 @@ public:
 
 	float getPythagoras(); //Pythagoras is used to calculate distances or the magnitude/length of vectors
 
-	//float acceleration(float inSpeedIncrease);
+	float acceleration(float inSpeedIncrease);
 
-	//float areaGravity(float gravityQuotient);
+	float areaGravity(float gravityQuotient);
 
 	Mathmatics vectorOffset(Mathmatics inVectorToAdd); //is used to change direction
 

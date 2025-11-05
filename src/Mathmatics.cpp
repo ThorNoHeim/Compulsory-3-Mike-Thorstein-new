@@ -7,21 +7,24 @@ float Mathmatics::getPythagoras()
 	return pythagoras;
 }
 
-//float Mathmatics::acceleration(float inSpeedIncrease)
-//{
-//	//acceleration is m/s^2, or meter per second per second, where m/s is speed in meters per second, and acceleration is speed added per second
-// dt = GetFrameTime()
-// acceleration = inSpeedIncrease/(dt*dt)
-//
-//	return 0.0f;
-//}
-//
-//float Mathmatics::areaGravity(float gravityQuotient)
-//{
-//	float earthGravity = 9.81f; //earth gravity is 9,81 m/s^2 as downwards acceleration
-//	float areaGravity = earthGravity * gravityQuotient;
-//	return areaGravity;
-//}
+float Mathmatics::acceleration(float inSpeedIncrease)
+{
+	//acceleration is m/s^2, or meter per second per second, where m/s is speed in meters per second, and acceleration is speed added per second
+	float dt = GetFrameTime();
+
+	//float Acceleration = inSpeedIncrease / (dt * dt);
+
+	float Acceleration = inSpeedIncrease * dt;
+
+	return Acceleration;
+}
+
+float Mathmatics::areaGravity(float gravityQuotient)
+{
+	float earthGravity = 9.81f; //earth gravity is 9,81 m/s^2 as downwards acceleration
+	float areaGravity = earthGravity * gravityQuotient;
+	return areaGravity;
+}
 
 /*
 float g = 9.81f;
@@ -77,8 +80,8 @@ Mathmatics Mathmatics::NormalizeVector()
 Mathmatics Mathmatics::vectorTowardTarget(Mathmatics inTargetVector)
 {
 	float targetXVector = inTargetVector.x - x;
-	float targetyVector = inTargetVector.y - y;
-	Mathmatics targettingVector{ inTargetVector.x, inTargetVector.y };
+	float targetYVector = inTargetVector.y - y;
+	Mathmatics targettingVector{ targetXVector, targetYVector };
 
 	return targettingVector;
 }
